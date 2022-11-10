@@ -1,0 +1,31 @@
+{% extends "encyclopedia/layout.html" %}
+{% block title %}
+    Creation
+{% endblock %}
+
+{% block body %}
+<form class="creat_form">
+    <input class="creat_header" type="text" name="header" placeholder="Header">
+    <textarea class="creat_text" name="main_text" placeholder="Text of the article"></textarea>
+    <button class="creat_button">Creat</button>
+</form>
+
+<style  type='text/css'>
+    .creat_header {
+        width: 94%;
+    }
+    .creat_text {
+        width: 94%;
+        height: 60%;
+
+    }
+    .creat_form {
+        height: 90%;
+    }
+    .creat_button {
+        width: 10%;
+    }
+</style>
+{% endblock %}
+
+

@@ -1,0 +1,32 @@
+{% extends "encyclopedia/layout.html" %}
+{% block title %}
+    Redact
+{% endblock %}
+
+{% block body %}
+<form class="redact_form">
+    <h2 class="redact_header">{{name}}</h2>
+    <textarea class="redact_text" name="main_text" >{{article|safe}}</textarea>
+    <button class="redact_button" name="header" value={{name|safe}}>Redact</button>
+</form>
+
+<style  type='text/css'>
+    .redact_header {
+        width: 94%;
+        height: 10%;
+    }
+    .redact_text {
+        width: 94%;
+        height: 60%;
+
+    }
+    .redact_form {
+        height: 90%;
+    }
+    .redact_button {
+        width: 10%;
+    }
+</style>
+{% endblock %}
+
+

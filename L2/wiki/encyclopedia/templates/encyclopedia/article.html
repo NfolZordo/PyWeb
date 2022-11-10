@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{name |safe}}
+{% endblock %}
+
+{% block body %}
+    <p>
+        {{ article |safe}}
+    </p>
+    <form>
+        <button name="redact" value={{name |safe}}>Redact</button>
+    </form>
+{% endblock %}
+
