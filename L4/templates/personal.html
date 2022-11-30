@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content2 %}
+    <lu>
+        {% for news in news_list %}
+            <li style="margin-bottom: 50px;">{{ news.title }}<p> {{ news.text }}<p style="font-style:
+                italic">Тема: {{ news.topic.name }}</p></li>
+        {% endfor %}
+    </lu>
+{% endblock %}
+{% block content %}
+    <hr>
+
+    {% if user.is_authenticated %}
+        <a href="{% url 'personal' %}">Personal office</a>
+        <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+        <a href="{% url 'login' %}">Login</a> |
+        <a href="{% url 'register' %}">Register</a>
+    {% endif %}
+
+    <form action="" style="margin-top: 20px;">
+        <input type="checkbox" name="personalTopic[]" value="Спорт" checked>
+        <label for="vehicle1"> Спорт</label><br>
+        <input type="checkbox" name="personalTopic[]" value="Політика" checked>
+        <label for="vehicle2"> Політика</label><br>
+        <input type="checkbox" name="personalTopic[]" value="Юмор" checked>
+        <label for="vehicle3"> Юмор</label><br><br>
+        <input type="submit" value="Відібрати">
+      </form>
+{% endblock %}

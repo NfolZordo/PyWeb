@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}
+    Creation
+{% endblock %}
+{% block content2 %}
+<form href="/news" class="creat_form" method="POST">
+    {% csrf_token %}
+    <input class="creat_header" type="text" name="header" placeholder="Header">
+    <textarea class="creat_text" name="main_text" placeholder="Text of the news" style="margin-bottom:10px;"></textarea>
+    <select name="topic" style="margin-bottom:10px;">
+        <option value="Спорт">Спорт</option>
+        <option value="Політика">Політика</option>
+        <option value="Юмор">Юмор</option>
+      </select>
+    <button class="creat_button">Creat</button>
+</form>
+
+<style  type='text/css'>
+    form {
+        display: flex; 
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    body {
+        position: absolute;
+    }
+    .creat_header {
+        width: 94%;
+    }
+    .creat_text {
+        width: 94%;
+        height: 60%;
+
+    }
+    .creat_form {
+        height: 90%;
+    }
+    .creat_button {
+        width: 50px;
+    }
+</style>
+{% endblock %}
+
+

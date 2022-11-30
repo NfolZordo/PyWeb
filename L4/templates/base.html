@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100%; min-height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+</head>
+<body style="display: grid; grid-template: 100% / 150px 4fr; height: 100%; min-width: 100%; margin: 0;;">
+    <div style=" padding: 20px;  background-color: rgb(206, 206, 206);">
+        <a href="/main_news" style="font-size: 50px;">News</a>
+        <a  href="/creation">Add new news</a>
+        {% block content %}
+        {% endblock %}
+    </div>
+    <body class="container">
+
+    <div style="padding: 30px; margin-left: 40px;">
+        {% block content2 %}{% endblock %}
+    </div>
+</body>
+</html>
+
+
